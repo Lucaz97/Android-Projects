@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#13131e"
+    android:id="@+id/relLay">
+
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/musicButton"
+        android:layout_alignTop="@+id/textView5"
+        android:layout_toRightOf="@+id/textView5"
+        android:layout_toEndOf="@+id/textView5"
+        android:layout_marginLeft="44dp"
+        android:layout_marginStart="44dp"
+        android:checked="true" />
+
+    <TextView
+        android:layout_width="120dp"
+        android:layout_height="45dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Music"
+        android:id="@+id/textView5"
+        android:textColor="#e0e0e0"
+        android:textSize="27dp"
+        android:textAlignment="inherit"
+        android:gravity="center_vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="34dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="54dp" />
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/redSeekBar"
+        android:progressBackgroundTint="#fa0505"
+        android:progressBackgroundTintMode="multiply"
+        android:layout_alignBottom="@+id/textView7"
+        android:layout_toRightOf="@+id/textView7"
+        android:layout_toEndOf="@+id/textView7"
+        android:indeterminate="false"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="6dp"
+        android:max="255"
+        android:progress="1" />
+
+    <TextView
+        android:layout_width="170dp"
+        android:layout_height="45dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Background"
+        android:id="@+id/textView6"
+        android:textColor="#e0e0e0"
+        android:textSize="27dp"
+        android:textAlignment="inherit"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/musicButton"
+        android:layout_alignLeft="@+id/textView5"
+        android:layout_alignStart="@+id/textView5"
+        android:layout_marginTop="45dp" />
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/greenSeekBar"
+        android:progressBackgroundTint="#fa0505"
+        android:progressBackgroundTintMode="multiply"
+        android:layout_below="@+id/redSeekBar"
+        android:layout_alignLeft="@+id/redSeekBar"
+        android:layout_alignStart="@+id/redSeekBar"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="9dp"
+        android:indeterminate="false"
+        android:max="255"
+        android:progress="1" />
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/blueSeekBar"
+        android:progressBackgroundTint="#fa0505"
+        android:progressBackgroundTintMode="multiply"
+        android:layout_below="@+id/greenSeekBar"
+        android:layout_alignLeft="@+id/greenSeekBar"
+        android:layout_alignStart="@+id/greenSeekBar"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="9dp"
+        android:indeterminate="false"
+        android:max="255"
+        android:progress="1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="R"
+        android:id="@+id/textView7"
+        android:textColor="#ff0101"
+        android:textSize="27dp"
+        android:textAlignment="center"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/textView6"
+        android:layout_alignLeft="@+id/textView6"
+        android:layout_alignStart="@+id/textView6"
+        android:layout_marginTop="2dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="G"
+        android:id="@+id/textView8"
+        android:textColor="#15ff00"
+        android:textSize="27dp"
+        android:textAlignment="center"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/textView7"
+        android:layout_alignLeft="@+id/textView7"
+        android:layout_alignStart="@+id/textView7"
+        android:layout_marginTop="6dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="B"
+        android:id="@+id/textView9"
+        android:textColor="#0284fe"
+        android:textSize="27dp"
+        android:textAlignment="center"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/textView8"
+        android:layout_alignLeft="@+id/textView8"
+        android:layout_alignStart="@+id/textView8"
+        android:layout_marginTop="6dp" />
+</RelativeLayout>

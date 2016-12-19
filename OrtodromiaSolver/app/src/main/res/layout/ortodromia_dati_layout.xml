@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="luca.ortodromiasolver.MainActivity"
+    android:background="#3f0051ff"
+    android:visibility="visible">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollViewOrt"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Dati disponibili"
+                android:id="@+id/mainTitleText"
+                android:textSize="28sp" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Lat. A"
+                    android:id="@+id/latAText"
+                    android:textSize="23sp"
+                    android:paddingTop="5sp"
+                    android:paddingRight="14sp" />
+
+                <EditText
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/latAinput"
+                    android:text="es:  &quot;34.39&quot;" />
+
+                <Switch
+                    android:layout_width="match_parent"
+                    android:layout_height="34dp"
+                    android:text="N"
+                    android:id="@+id/switchLatA"
+                    android:checked="false"
+                    android:paddingLeft="10dp"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Long. A"
+                    android:id="@+id/longAText"
+                    android:textSize="23sp"
+                    android:paddingTop="5sp"
+                    android:paddingRight="14sp" />
+
+                <EditText
+                    android:layout_width="83dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/longAinput"
+                    android:layout_weight="0.00" />
+
+                <Switch
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="E"
+                    android:id="@+id/switchLongA"
+                    android:checked="false"
+                    android:paddingLeft="10dp"
+                    android:layout_weight="0.01"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Lat. B"
+                    android:id="@+id/latBText"
+                    android:textSize="23sp"
+                    android:paddingTop="5sp"
+                    android:paddingRight="14sp" />
+
+                <EditText
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/latBinput" />
+
+                <Switch
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="N"
+                    android:id="@+id/switchLatB"
+                    android:checked="false"
+                    android:paddingLeft="10dp"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Long. B"
+                    android:id="@+id/longBText"
+                    android:textSize="23sp"
+                    android:paddingTop="5sp"
+                    android:paddingRight="14sp" />
+
+                <EditText
+                    android:layout_width="83dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/longBinput" />
+
+                <Switch
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="E"
+                    android:id="@+id/switchLongB"
+                    android:checked="false"
+                    android:paddingLeft="10dp"
+                    android:layout_weight="0.54"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="65dp"
+                android:text="Calcola"
+                android:id="@+id/calcolaOrto"
+                android:textSize="23sp"
+                android:layout_gravity="center_horizontal" />
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="400dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="ERRORE ! \n Inserisci i dati nella forma corretta!"
+        android:id="@+id/ortoErrorMessage"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textColor="#ff0000"
+        android:textSize="30sp"
+        android:background="#294155"
+        android:visibility="visible"
+        android:textAlignment="center"
+        android:paddingTop="100dp"
+        android:textStyle="italic" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:text="OK"
+        android:id="@+id/hideError"
+        android:visibility="visible"
+        android:layout_centerHorizontal="true"
+        android:textSize="27dp"
+        android:layout_marginTop="250dp" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:weightSum="1"
+        android:visibility="visible"
+        android:id="@+id/risultatiOrt">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Risultati:"
+            android:id="@+id/textView"
+            android:textSize="27sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="245dp"
+            android:layout_height="wrap_content"
+            android:text="Distanza ortodromica:"
+            android:id="@+id/textView2"
+            android:textSize="23sp"
+            android:paddingTop="15dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Risultato"
+            android:id="@+id/distOrtRslt"
+            android:textSize="23sp"
+            android:textIsSelectable="true" />
+
+        <TextView
+            android:layout_width="245dp"
+            android:layout_height="wrap_content"
+            android:text="Rotta Iniziale:"
+            android:id="@+id/textView4"
+            android:textSize="23sp"
+            android:paddingTop="15dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Risultato"
+            android:id="@+id/riRslt"
+            android:textSize="23sp"
+            android:textIsSelectable="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delta Lambda:"
+            android:textSize="23sp"
+            android:paddingTop="15dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Risultato"
+            android:id="@+id/deltaLongRslt"
+            android:textSize="23sp"
+            android:textIsSelectable="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delta Fi:"
+            android:textSize="23sp"
+            android:paddingTop="15dp"
+            android:id="@+id/textView3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Risultato"
+            android:id="@+id/deltaLatRslt"
+            android:textSize="23sp"
+            android:textIsSelectable="true" />
+    </LinearLayout>
+
+</RelativeLayout>
